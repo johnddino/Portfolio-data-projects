@@ -1,0 +1,118 @@
+1.
+-- Total Revenue and Profit
+SELECT 
+  SUM(`Sales Amount`) AS Total_Revenue,
+  SUM (Profit) AS Profit
+FROM 
+  Sales_data_query;
+
+2.
+-- Total Revenue in United States
+SELECT 
+  SUM(`Sales Amount`) AS Total_Revenue
+FROM 
+  Sales_data_query
+WHERE `Country`="United States";
+
+
+3.
+-- List of Categories and Products
+
+SELECT 
+  `Product Category` AS Categories,
+  `Product name` AS Products
+FROM 
+  Sales_data_query;
+
+4.
+--Number of Customers per Country
+SELECT 
+  Country,
+  COUNT(*) AS Number_of_Customers
+FROM
+  Sales_data_query
+GROUP BY `Country`;
+
+5.
+--Number of Shipped Items per Year
+SELECT 
+  `Fiscal Year`,
+  COUNT(`Ship date`) AS `Ship_date`
+FROM
+  Sales_Data`
+GROUP BY `Fiscal Year`;
+
+6.
+-- Rename Column from SalesAmount to Revenue
+ALTER TABLE   
+  Sales_data_query
+RENAME COLUMN `SalesAmount` to `Revenue`
+
+7.
+--Combining the matching columns
+SELECT 
+  ResellerKey,
+  Country AS `Country-Region`,
+  `Business type`
+FROM
+  Sales_Data`
+UNION ALL
+SELECT 
+  ResellerKey,
+  `Country-Region`,
+  `Business Type`
+FROM
+  Reseller_Data`
+LIMIT 1000
+
+8.
+-- Full Join
+SELECT 
+  SalesData.Country, SalesData.`Group`, ResellerData.City, ResellerData.`Postal Code`
+FROM 
+  `erudite-phalanx-448512-b5.Sales_data_query.Sales_Data` AS SalesData
+FULL JOIN
+  `erudite-phalanx-448512-b5.Sales_data_query.Reseller_Data` AS ResellerData
+ON SalesData.ResellerKey = ResellerData.ResellerKey
+
+Or 
+
+SELECT Sales_Data.Country, Sales_Data.`Group`, Reseller_Data.City, Reseller_Data.`Postal Code`
+FROM Sales_data_query.Sales_Data
+FULL JOIN Sales_data_query.Reseller_Data
+ON Sales_Data.ResellerKey = Reseller_Data.ResellerKey;
+
+
+---- Full Join
+-- Reseller Key as Primary key that matches country, country region from Sales data table and Country-region and City from reseller data table.
+
+SELECT Sales_Data.Country, Sales_Data.Region, Reseller_Data.`Country-Region`, Reseller_Data.City
+FROM Sales_data_query.Sales_Data
+FULL JOIN Sales_data_query.Reseller_Data
+ON Sales_Data.ResellerKey = Reseller_Data.ResellerKey;
+
+9.
+
+-- Average Revenue per Region and Country
+
+SELECT Country, Region, `Sales Amount`,
+      (SELECT AVG(`Sales Amount`) FROM Sales_data_query.Sales_Data) AS Revenue
+FROM Sales_data_query.Sales_Data
+
+-- Below Average per Region and Country
+
+SELECT Country, Region, `Sales Amount`
+FROM Sales_data_query.Sales_Data
+WHERE `Sales Amount` < (SELECT AVG(`Sales Amount`) FROM Sales_data_query.Sales_Data)
+
+
+-- JOIN
+
+SELECT sales_data_query.Country, sales_data_query.`Group`, reseller_data.City, reseller_data.`Postal Code` FROM sales_data_query
+JOIN reseller_data ON sales_data_query.ResellerKey = reseller_data.ResellerKey;
+
+-- UNION ALL
+
+SELECT ResellerKey, `Business type` FROM sales_data_query
+UNION ALL
+SELECT ResellerKey, `Business Type` FROM reseller_data;
