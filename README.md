@@ -5,4 +5,4 @@
 <a href="https://docs.google.com/spreadsheets/d/1cMlWGrUiJKf0hBQkHjrOrCbI4x_J-Mn9/edit?gid=1034639099#gid=1034639099"><Google Sheets</a>
 <a href="https://1drv.ms/x/c/968480567086162c/EcMiERvaD69OpFoqdwerHMcB1W8oJ1RjZGB-58a6nerxRQ?e=BtQInJ"><Microsoft Excel</a>
 
-SQL is still working in progress but you can check the txt files with the name SQL queries.
+SQL is still working in progress but you can check the txt files with the name SQL queries. You can download my PowerBI file.
