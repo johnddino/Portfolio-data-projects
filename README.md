@@ -9,4 +9,6 @@
 6. <a href="https://1drv.ms/x/c/968480567086162c/EUlJD7TkG1lFir56-IAcKBUBmND1Mhv4eEcWQvdmRplKSg?e=2beQqw"><Microsoft Excel</a> - Bank Product Complaints Report
 7. <a href="https://public.tableau.com/views/Complaintreport/Story1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"><Tableau</a> - Bank Product Customer Complaint using Tableau
 
-You can check my SQL query notes by downloading the list here.
+You can check my SQL query notes and PBI files by downloading the list.
+
+Thank you.
