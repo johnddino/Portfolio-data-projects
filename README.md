@@ -9,6 +9,7 @@
 6. <a href="https://1drv.ms/x/c/968480567086162c/EUlJD7TkG1lFir56-IAcKBUBmND1Mhv4eEcWQvdmRplKSg?e=2beQqw"><Microsoft Excel</a> - Bank Product Complaints Report
 7. <a href="https://public.tableau.com/views/Complaintreport/Story1?:language=en-US&:sid=&:redirect=auth&:display_count=n&:origin=viz_share_link"><Tableau</a> - Bank Product Customer 
 8. <a href="https://lookerstudio.google.com/reporting/829e163b-6859-4cce-88f4-4cfaed7b95d6"><Google Looker Studio</a> - Bank Complaints Report
+9. <a href="https://github.com/johnddino/Portfolio-data-projects/blob/main/consumer_complaint.ipynb"><Python Jupyter Notebook</a> - Consumer complaint
 Complaint using Tableau
 
 You can check my SQL query notes and PBI files by downloading the list.
